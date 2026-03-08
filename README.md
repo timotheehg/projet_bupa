@@ -141,14 +141,14 @@ Le projet est centré sur un notebook final.
 Pour plus de détails :
 - [Guide du notebook](docs/notebook_guide.md)
 
-## Environment note
+## Note sur l’environnement
 
-This notebook was primarily developed and executed in Google Colab with GPU support.
+Ce notebook a été principalement développé et exécuté dans Google Colab avec prise en charge du GPU.
 
-Some steps depend on:
-- a GPU-enabled runtime
-- access to Hugging Face
-- Colab-specific utilities for secret management and file download
+Certaines étapes dépendent :
+- d’un environnement d’exécution avec GPU
+- d’un accès à Hugging Face
+- d’utilitaires spécifiques à Colab pour la gestion des secrets et le téléchargement de fichiers
 
 ## Limites du projet
 
