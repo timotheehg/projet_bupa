@@ -57,7 +57,8 @@ projet_bupa/
 ├── .gitignore
 ├── notebooks/
 ├── docs/
-└── results/```
+└── results/
+```
 
 ## Pipeline résumée
 
