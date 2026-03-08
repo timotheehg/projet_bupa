@@ -38,9 +38,30 @@ Si vous découvrez le projet, l'ordre de lecture conseillé est :
 - [Guide des résultats](docs/results_guide.md)
 - [Carte du dépôt](docs/repository_map.md)
 
+### Analyse et synthèse
+- [Résumé de l’audit](docs/audit_summary.md)
+- [Rapport benchmark](docs/benchmark_report.md)
+
+### Fichiers importants
+- [Notebook final](notebooks/BUPA_benchmark_final.ipynb)
+- [Résultats intermédiaires](results/intermediates/)
+- [Résultats finaux](results/summaries/)
+- [Autres résultats](results/other_results/)
+- [Exemples patients](results/examples/)
+
+## Structure générale du dépôt
+
+```text
+projet_bupa/
+├── README.md
+├── .gitignore
+├── notebooks/
+├── docs/
+└── results/
+
 ## Pipeline résumée
 
-Le pipeline suit la logique suivante :
+La logique générale du projet est la suivante :
 
 **FHIR filtered -> gold source -> note générée -> reconstruction -> scoring -> vérification -> taxonomie**
 
@@ -85,6 +106,21 @@ Les grandes conclusions sont les suivantes :
 - une partie importante de la perte d’information semble apparaître entre la source structurée et la note générée
 - certains styles de notes sont plus robustes que d’autres
 
+### Aperçu visuel des résultats
+
+| Indicateur | Valeur |
+|---|---:|
+| Officiel conditions exact F1 | 0.525 |
+| Officiel conditions sémantique F1 | 0.833 |
+| Officiel medication requests exact F1 | 0.802 |
+| Officiel medication requests sémantique F1 | 0.905 |
+| Vérification taux consistent | 0.900 |
+| Vérification confiance moyenne | 0.890 |
+
+![Vue globale des F1 exacts et sémantiques](assets/figures/overall_f1.png)
+
+*Figure : vue globale des performances exactes et sémantiques du benchmark.*
+
 Pour la lecture détaillée :
 - [Guide des résultats](docs/results_guide.md)
 - [Rapport benchmark](docs/benchmark_report.md)
@@ -103,6 +139,15 @@ Le projet est centré sur un notebook final.
 Pour plus de détails :
 - [Guide du notebook](docs/notebook_guide.md)
 
+## Environment note
+
+This notebook was primarily developed and executed in Google Colab with GPU support.
+
+Some steps depend on:
+- a GPU-enabled runtime
+- access to Hugging Face
+- Colab-specific utilities for secret management and file download
+
 ## Limites du projet
 
 - les données utilisées sont synthétiques
@@ -110,33 +155,12 @@ Pour plus de détails :
 - les résultats dépendent du modèle utilisé
 - les métriques exactes sur les conditions restent exigeantes et pénalisent certaines reformulations
 
-## Ordre de lecture conseillé
+## Contact de lecture conseillé
 
-Si tu découvres le projet, lis dans cet ordre :
+Si vous découvrez le projet, l’ordre conseillé est :
 
 1. [Vue d’ensemble du projet](docs/project_overview.md)
 2. [Pipeline détaillée](docs/pipeline_explained.md)
 3. [Guide des résultats](docs/results_guide.md)
 4. [Rapport benchmark](docs/benchmark_report.md)
 5. [Exemples patients](results/examples/)
-
-### Analyse et synthèse
-- [Résumé de l’audit](docs/audit_summary.md)
-- [Rapport benchmark](docs/benchmark_report.md)
-
-### Fichiers importants
-- [Notebook final](notebooks/BUPA_benchmark_final.ipynb)
-- [Résultats intermédiaires](results/intermediates/)
-- [Résultats finaux](results/summaries/)
-- [Autres résultats](results/other_results/)
-- [Exemples patients](results/examples/)
-
-## Structure générale du dépôt
-
-```text
-projet_bupa/
-├── README.md
-├── .gitignore
-├── notebooks/
-├── docs/
-└── results/
