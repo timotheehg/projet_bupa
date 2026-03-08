@@ -49,6 +49,16 @@ Si vous découvrez le projet, l'ordre de lecture conseillé est :
 - [Autres résultats](results/other_results/)
 - [Exemples patients](results/examples/)
 
+## Structure générale du dépôt
+
+```text
+projet_bupa/
+├── README.md
+├── .gitignore
+├── notebooks/
+├── docs/
+└── results/```
+
 ## Pipeline résumée
 
 La logique générale du projet est la suivante :
@@ -154,13 +164,3 @@ Si vous découvrez le projet, l’ordre conseillé est :
 3. [Guide des résultats](docs/results_guide.md)
 4. [Rapport benchmark](docs/benchmark_report.md)
 5. [Exemples patients](results/examples/)
-
-## Structure générale du dépôt
-
-```text
-projet_bupa/
-├── README.md
-├── .gitignore
-├── notebooks/
-├── docs/
-└── results/
