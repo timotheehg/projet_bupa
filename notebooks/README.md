@@ -1,1 +1,1 @@
-Ce dossier contient le notebook final du benchmark BUPA.
+Ce dossier contient le notebook final du projet BUPA.
