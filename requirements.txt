@@ -1,0 +1,9 @@
+pandas
+matplotlib
+requests
+tqdm
+pydantic
+huggingface_hub
+transformers
+torch
+bitsandbytes
