@@ -27,6 +27,55 @@ Les styles ne se valent pas tous. Certains facilitent davantage la reconstructio
 ### 5. Une partie de la perte apparaît avant la reconstruction finale
 Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la perte semble venir de la transmission source -> note.
 
+## Résultats visuels
+
+### Vue globale des performances
+
+| Indicateur | Valeur |
+|---|---:|
+| Officiel conditions exact F1 | 0.525 |
+| Officiel conditions sémantique F1 | 0.833 |
+| Officiel medication requests exact F1 | 0.802 |
+| Officiel medication requests sémantique F1 | 0.905 |
+| Secondaire conditions exact F1 | 0.440 |
+| Secondaire conditions sémantique F1 | 0.390 |
+| Secondaire medication requests exact F1 | 0.703 |
+| Secondaire medication requests sémantique F1 | 0.730 |
+
+![Vue globale des F1 exacts et sémantiques](../assets/figures/overall_f1.png)
+
+*Figure 1 : vue globale des F1 exacts et sémantiques.*
+
+### Comparaison par style de note
+
+| Style de note | Officiel cond exact F1 | Officiel méd exact F1 | Secondaire cond exact F1 | Secondaire méd exact F1 | Taux consistent |
+|---|---:|---:|---:|---:|---:|
+| Health check summary | 0.533 | 0.829 | 0.458 | 0.785 | 0.900 |
+| Medical history note | 0.650 | 0.882 | 0.546 | 0.850 | 0.900 |
+| Short consultation note | 0.381 | 0.776 | 0.288 | 0.665 | 0.900 |
+| Telegraphic note | 0.536 | 0.722 | 0.460 | 0.525 | 0.900 |
+
+![Comparaison des F1 exacts par style de note](../assets/figures/style_exact_f1.png)
+
+*Figure 2 : comparaison des F1 exacts par style de note.*
+
+### Taxonomie des erreurs
+
+![Catégories de taxonomie les plus fréquentes](../assets/figures/taxonomy_top.png)
+
+*Figure 3 : catégories de taxonomie les plus fréquentes pour les conditions et les medication requests.*
+
+### Vérification
+
+| Verdict | Nombre |
+|---|---:|
+| consistent | 36 |
+| unknown | 4 |
+
+![Vérification par style de note](../assets/figures/verification_by_style.png)
+
+*Figure 4 : vérification par style de note.*
+
 ## Lecture recommandée des résultats
 
 Pour lire les résultats :
