@@ -21,12 +21,10 @@ Chaque sous-dossier patient peut contenir :
 - `01_filtered.json`
 - `02_gold.json`
 - `03_note.txt`
-- `04_reconstruction_raw.json`
-- `05_reconstruction_conditions.json`
-- `06_reconstruction_medication_requests.json`
-- `07_score.json`
-- `08_verification.json`
-- `09_taxonomy.txt`
+- `04_reconstruction.json`
+- `05_score.json`
+- `06_verification.json`
+- `07_taxonomy.json`
 - `README.md`
 
 ## Utilité
