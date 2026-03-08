@@ -19,6 +19,16 @@ Le projet se concentre principalement sur deux types d'information :
 - les **conditions**
 - les **medication requests**
 
+## Quick start
+
+Si vous découvrez le projet, l'ordre de lecture conseillé est :
+
+1. [Vue d’ensemble du projet](docs/project_overview.md)
+2. [Pipeline détaillée](docs/pipeline_explained.md)
+3. [Guide des résultats](docs/results_guide.md)
+4. [Synthèse globale des scores](results/summaries/metrics/df_scores_overall_summary.csv)
+5. [Exemples patients](results/examples/)
+
 ## Navigation rapide
 
 ### Comprendre le projet
