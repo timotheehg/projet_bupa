@@ -1,9 +1,11 @@
-Ce dossier contient les résultats intermédiaires principaux du pipeline.
+Ce dossier contient des résultats secondaires du benchmark.
+
+Ils ne sont pas indispensables pour comprendre le projet, mais ils peuvent être utiles pour une lecture plus détaillée ou pour explorer les données plus finement.
 
 Contenu :
-- `df_gold.csv` : source structurée filtrée utilisée pour générer les notes
-- `df_notes.csv` : notes générées, avec versions brutes et nettoyées
-- `df_recon.csv` : reconstruction structurée obtenue à partir des notes
-
-Ce sous-dossier permet de suivre la chaîne principale :
-source structurée -> note générée -> reconstruction.
+- `df_index.csv` : index des patients filtrés disponibles
+- `df_export_review.csv` : revue synthétique des exports finaux
+- `df_gold_conditions_long.csv` : version longue des conditions gold
+- `df_gold_medreq_long.csv` : version longue des medication requests gold
+- `df_recon_conditions_long.csv` : version longue des conditions reconstruites
+- `df_recon_medreq_long.csv` : version longue des medication requests reconstruites
