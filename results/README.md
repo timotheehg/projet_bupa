@@ -1,14 +1,37 @@
-Ce dossier regroupe les résultats du benchmark BUPA.
+# Results
 
-Organisation :
+Ce dossier regroupe les résultats produits par le benchmark BUPA.
 
-- `intermediates/` : résultats intermédiaires de la pipeline
-- `summaries/` : résultats finaux, scores, erreurs et vérification
-- `other_results/` : résultats secondaires utiles pour une lecture plus détaillée
-- `examples/` : quelques exemples patients permettant de suivre la pipeline de bout en bout
+L'objectif est de séparer clairement :
 
-L'objectif est de séparer :
-1. la mécanique du pipeline,
-2. les résultats finaux principaux,
-3. les résultats complémentaires,
-4. les exemples concrets patient par patient.
+1. les **résultats intermédiaires** de la pipeline,
+2. les **résultats finaux** de performance,
+3. les **résultats secondaires** utiles pour une lecture plus détaillée,
+4. les **exemples patients** permettant de suivre la pipeline complète sur des cas individuels.
+
+## Organisation
+
+- [`intermediates/`](intermediates/) : résultats intermédiaires principaux de la pipeline
+- [`summaries/`](summaries/) : résultats finaux du benchmark
+- [`other_results/`](other_results/) : résultats secondaires utiles pour une lecture plus détaillée
+- [`examples/`](examples/) : exemples patients illustrant la pipeline de bout en bout
+
+## Ordre de lecture conseillé
+
+Si vous découvrez le projet, l'ordre conseillé est :
+
+1. lire `summaries/`
+2. consulter `intermediates/`
+3. explorer `examples/`
+4. utiliser `other_results/` si une lecture plus détaillée est nécessaire
+
+## Pipeline résumée
+
+La logique générale du projet est la suivante :
+
+**filtered -> gold -> note générée -> reconstruction -> scoring -> vérification -> taxonomie**
+
+Ce dossier montre cette logique à deux niveaux :
+
+- **niveau global** avec les tables de synthèse
+- **niveau patient** avec les exemples individuels
