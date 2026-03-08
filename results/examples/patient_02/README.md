@@ -8,4 +8,4 @@ Exemple patient sélectionné pour illustrer la pipeline complète :
 4. reconstruction
 5. scoring
 6. vérification
-7. taxonomie
+7. taxonomie des erreurs
