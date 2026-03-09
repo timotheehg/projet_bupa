@@ -51,7 +51,7 @@ Exemples patients.
 
 ## Parcours conseillé
 
-Si tu veux comprendre le dépôt rapidement :
+Pour comprendre le dépôt rapidement :
 
 1. `README.md`
 2. `docs/project_overview.md`
