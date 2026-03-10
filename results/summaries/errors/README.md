@@ -4,9 +4,9 @@ Ce dossier contient l'analyse qualitative des erreurs du benchmark.
 
 ## Contenu
 
-- `df_error_taxonomy.csv` : taxonomie globale des erreurs
-- `df_error_taxonomy_by_note_style_conditions.csv` : taxonomie des erreurs sur les conditions par style de note
-- `df_error_taxonomy_by_note_style_medication_requests.csv` : taxonomie des erreurs sur les medication requests par style de note
+- `df_error_analysis.csv` : taxonomie globale des erreurs
+- `df_error_types_by_note_style_conditions.csv` : analyse des erreurs sur les conditions par style de note
+- `df_error_types_by_note_style_medication_requests.csv` : analyse des erreurs sur les medication requests par style de note
 - `df_hard_cases_by_note_style.csv` : cas difficiles identifiés par style de note
 
 ## Objectif
@@ -17,13 +17,13 @@ Ces fichiers permettent de répondre à une question différente des métriques 
 
 ## Rôle des fichiers
 
-### `df_error_taxonomy.csv`
+### `df_error_analysis.csv`
 Vue globale des catégories d'erreurs observées sur le benchmark.
 
-### `df_error_taxonomy_by_note_style_conditions.csv`
+### `df_error_types_by_note_style_conditions.csv`
 Analyse des erreurs sur les conditions, en fonction du style de note.
 
-### `df_error_taxonomy_by_note_style_medication_requests.csv`
+### `df_error_types_by_note_style_medication_requests.csv`
 Analyse des erreurs sur les medication requests, en fonction du style de note.
 
 ### `df_hard_cases_by_note_style.csv`
