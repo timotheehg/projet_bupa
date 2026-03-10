@@ -5,7 +5,7 @@ Ce dossier contient les résultats finaux du benchmark BUPA.
 Il est organisé en trois sous-parties :
 
 - [`metrics/`](metrics/) : métriques de performance et synthèses globales
-- [`errors/`](errors/) : taxonomie des erreurs et cas difficiles
+- [`errors/`](errors/) : analyse des erreurs et cas difficiles
 - [`verification/`](verification/) : résultats de la chaîne de vérification LLM
 
 ## Objectif
