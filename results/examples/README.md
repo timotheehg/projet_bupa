@@ -2,7 +2,7 @@
 
 Ce dossier contient quelques exemples patients permettant de suivre la pipeline complète de bout en bout :
 
-**filtered -> gold -> note -> reconstruction -> score -> vérification -> taxonomie**
+**filtered -> gold -> note -> reconstruction -> score -> vérification -> analyse des erreurs**
 
 ## Objectif
 
@@ -21,7 +21,7 @@ Chaque sous-dossier patient contient :
 - `02_gold.json`
 - `03_note.txt`
 - `04_reconstruction.json`
-- `05_score_and_07_taxonomy.json`
+- `05_score_and_07_errors.json`
 - `06_verification.json`
 - `README.md`
 
