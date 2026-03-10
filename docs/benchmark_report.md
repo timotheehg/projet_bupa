@@ -13,19 +13,26 @@ Plusieurs styles de notes ont été utilisés pour tester la robustesse du pipel
 ## Résultats principaux
 
 ### 1. Le pipeline fonctionne globalement bien
+
 Les résultats montrent que la chaîne produit des reconstructions exploitables et qu’elle peut être benchmarkée de manière structurée.
 
 ### 2. Les medication requests sont mieux reconstruites que les conditions
+
 C’est le constat principal du benchmark.
 
 ### 3. Les conditions ont un écart important entre exact et sémantique
+
 Cela signifie que le pipeline retrouve souvent le bon sens clinique, mais pas toujours le bon libellé exact ou la bonne forme canonique.
 
 ### 4. Certains styles de note sont plus robustes que d’autres
+
 Les styles ne se valent pas tous. Certains facilitent davantage la reconstruction.
 
 ### 5. Une partie de la perte apparaît avant la reconstruction finale
-Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la perte semble venir de la transmission source -> note.
+
+Les erreurs ne viennent pas seulement de l’extracteur final.
+
+La comparaison entre **note vs recon** et **source vs recon** suggère qu’une partie de la perte semble venir de la transmission source -> note.
 
 ## Résultats visuels
 
@@ -33,14 +40,14 @@ Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la 
 
 | Indicateur | Valeur |
 |---|---:|
-| Officiel conditions exact F1 | 0.525 |
-| Officiel conditions sémantique F1 | 0.833 |
-| Officiel medication requests exact F1 | 0.802 |
-| Officiel medication requests sémantique F1 | 0.905 |
-| Secondaire conditions exact F1 | 0.440 |
-| Secondaire conditions sémantique F1 | 0.390 |
-| Secondaire medication requests exact F1 | 0.703 |
-| Secondaire medication requests sémantique F1 | 0.730 |
+| Note vs recon conditions exact F1 | 0.525 |
+| Note vs recon conditions sémantique F1 | 0.833 |
+| Note vs recon medication requests exact F1 | 0.802 |
+| Note vs recon medication requests sémantique F1 | 0.905 |
+| Source vs recon conditions exact F1 | 0.440 |
+| Source vs recon conditions sémantique F1 | 0.390 |
+| Source vs recon medication requests exact F1 | 0.703 |
+| Source vs recon medication requests sémantique F1 | 0.730 |
 
 ![Vue globale des F1 exacts et sémantiques](../assets/figures/overall_f1.png)
 
@@ -48,7 +55,7 @@ Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la 
 
 ### Comparaison par style de note
 
-| Style de note | Officiel cond exact F1 | Officiel méd exact F1 | Secondaire cond exact F1 | Secondaire méd exact F1 | Taux consistent |
+| Style de note | Note vs recon cond exact F1 | Note vs recon méd exact F1 | Source vs recon cond exact F1 | Source vs recon méd exact F1 | Taux consistent |
 |---|---:|---:|---:|---:|---:|
 | Health check summary | 0.533 | 0.829 | 0.458 | 0.785 | 0.900 |
 | Medical history note | 0.650 | 0.882 | 0.546 | 0.850 | 0.900 |
@@ -59,11 +66,11 @@ Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la 
 
 *Figure 2 : comparaison des F1 exacts par style de note.*
 
-### Taxonomie des erreurs
+### Analyse des erreurs
 
-![Catégories de taxonomie les plus fréquentes](../assets/figures/taxonomy_top.png)
+![Catégories d’erreurs les plus fréquentes](../assets/figures/error_categories.png)
 
-*Figure 3 : catégories de taxonomie les plus fréquentes pour les conditions et les medication requests.*
+*Figure 3 : catégories d’erreurs les plus fréquentes pour les conditions et les medication requests.*
 
 ### Vérification
 
@@ -79,16 +86,17 @@ Les erreurs ne viennent pas seulement de l’extracteur final. Une partie de la 
 ## Lecture recommandée des résultats
 
 Pour lire les résultats :
+
 - commencer par les synthèses globales
 - regarder ensuite les résultats par style de note
-- lire ensuite la taxonomie des erreurs
+- lire ensuite l’analyse des erreurs
 - consulter enfin les exemples patients
 
 ## Fichiers les plus importants
 
 - [Scores globaux](../results/summaries/metrics/df_scores_overall_summary.csv)
 - [Scores par style](../results/summaries/metrics/df_scores_summary_by_note_style.csv)
-- [Taxonomie des erreurs](../results/summaries/errors/df_error_taxonomy.csv)
+- [Analyse des erreurs](../results/summaries/errors/df_error_analysis.csv)
 - [Vérification](../results/summaries/verification/df_verification.csv)
 - [Cas difficiles](../results/summaries/errors/df_hard_cases_by_note_style.csv)
 
@@ -96,5 +104,4 @@ Pour lire les résultats :
 
 Le benchmark est globalement positif.
 
-Le pipeline est particulièrement convaincant sur les medication requests.
-Le principal axe d’amélioration concerne les conditions, en particulier leur fidélité exacte tout au long de la chaîne.
+Le pipeline est particulièrement convaincant sur les medication requests. Le principal axe d’amélioration concerne les conditions, en particulier leur fidélité exacte tout au long de la chaîne.
