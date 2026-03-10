@@ -115,7 +115,33 @@ Je conseille l’ordre suivant :
 6. `df_scores.csv`
 7. puis les tables intermédiaires et longues
 
-## 8. Messages principaux du benchmark
+## 8. Résultats visuels
+
+### Comparaison des scores par style de note
+
+| Style de note | Note vs recon cond exact F1 | Note vs recon méd exact F1 | Source vs recon cond exact F1 | Source vs recon méd exact F1 | Taux consistent |
+|---|---:|---:|---:|---:|---:|
+| Health check summary | 0.533 | 0.829 | 0.458 | 0.785 | 0.900 |
+| Medical history note | 0.650 | 0.882 | 0.546 | 0.850 | 0.900 |
+| Short consultation note | 0.381 | 0.776 | 0.288 | 0.665 | 0.900 |
+| Telegraphic note | 0.536 | 0.722 | 0.460 | 0.525 | 0.900 |
+
+![Comparaison des F1 exacts par style de note](../assets/figures/style_exact_f1.png)
+
+*Figure : comparaison des performances exactes par style de note.*
+
+### Vérification par style de note
+
+| Verdict | Nombre |
+|---|---:|
+| consistent | 36 |
+| unknown | 4 |
+
+![Vérification par style de note](../assets/figures/verification_by_style.png)
+
+*Figure : résultats de la chaîne de vérification selon le style de note.*
+
+## 9. Messages principaux du benchmark
 
 Les conclusions principales sont les suivantes :
 
