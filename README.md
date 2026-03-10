@@ -4,24 +4,24 @@
 
 Ce projet étudie un pipeline de reconstruction structurée de données médicales à partir de notes cliniques générées depuis des bundles FHIR synthétiques.
 
-L'idée générale est la suivante :
+L’idée générale est la suivante :
 
-1. partir d'un dossier patient structuré au format FHIR
-2. filtrer l'information utile
+1. partir d’un dossier patient structuré au format FHIR
+2. filtrer l’information utile
 3. construire une source structurée de référence
 4. générer une note clinique non structurée
 5. reconstruire une structure à partir de cette note
 6. évaluer la qualité de la reconstruction
 7. analyser les erreurs et les cas difficiles
 
-Le projet se concentre principalement sur deux types d'information :
+Le projet se concentre principalement sur deux types d’information :
 
 - les **conditions**
 - les **medication requests**
 
 ## Quick start
 
-Si vous découvrez le projet, l'ordre de lecture conseillé est :
+Si vous découvrez le projet, l’ordre de lecture conseillé est :
 
 1. [Vue d’ensemble du projet](docs/project_overview.md)
 2. [Pipeline détaillée](docs/pipeline_explained.md)
@@ -32,6 +32,7 @@ Si vous découvrez le projet, l'ordre de lecture conseillé est :
 ## Navigation rapide
 
 ### Comprendre le projet
+
 - [Vue d’ensemble du projet](docs/project_overview.md)
 - [Pipeline détaillée](docs/pipeline_explained.md)
 - [Guide du notebook](docs/notebook_guide.md)
@@ -39,10 +40,12 @@ Si vous découvrez le projet, l'ordre de lecture conseillé est :
 - [Carte du dépôt](docs/repository_map.md)
 
 ### Analyse et synthèse
+
 - [Résumé de l’audit](docs/audit_summary.md)
 - [Rapport benchmark](docs/benchmark_report.md)
 
 ### Fichiers importants
+
 - [Notebook final](notebooks/BUPA_benchmark_final.ipynb)
 - [Résultats intermédiaires](results/intermediates/)
 - [Résultats finaux](results/summaries/)
@@ -65,35 +68,44 @@ projet_bupa/
 
 La logique générale du projet est la suivante :
 
-**FHIR filtered -> gold source -> note générée -> reconstruction -> scoring -> vérification -> taxonomie**
+**FHIR filtered -> gold source -> note générée -> reconstruction -> scoring -> vérification -> analyse des erreurs**
 
 Pour une explication détaillée, voir :
+
 - [Pipeline détaillée](docs/pipeline_explained.md)
 
 ## Contenu du dépôt
 
 ### `notebooks/`
+
 Contient le notebook final du benchmark.
 
 ### `docs/`
+
 Contient la documentation du projet écrite directement en Markdown pour permettre une lecture fluide sur GitHub.
 
 ### `results/intermediates/`
+
 Contient les résultats intermédiaires principaux :
+
 - source structurée
 - notes générées
 - reconstruction
 
 ### `results/summaries/`
+
 Contient les résultats finaux :
+
 - métriques
-- erreurs
+- analyse des erreurs
 - vérification
 
 ### `results/other_results/`
+
 Contient des résultats secondaires utiles pour une lecture plus détaillée.
 
 ### `results/examples/`
+
 Contient quelques patients exemples permettant de suivre la pipeline complète de bout en bout.
 
 ## Résultats principaux
@@ -112,10 +124,14 @@ Les grandes conclusions sont les suivantes :
 
 | Indicateur | Valeur |
 |---|---:|
-| Officiel conditions exact F1 | 0.525 |
-| Officiel conditions sémantique F1 | 0.833 |
-| Officiel medication requests exact F1 | 0.802 |
-| Officiel medication requests sémantique F1 | 0.905 |
+| Note vs recon conditions exact F1 | 0.525 |
+| Note vs recon conditions sémantique F1 | 0.833 |
+| Note vs recon medication requests exact F1 | 0.802 |
+| Note vs recon medication requests sémantique F1 | 0.905 |
+| Source vs recon conditions exact F1 | 0.440 |
+| Source vs recon conditions sémantique F1 | 0.390 |
+| Source vs recon medication requests exact F1 | 0.703 |
+| Source vs recon medication requests sémantique F1 | 0.730 |
 | Vérification taux consistent | 0.900 |
 | Vérification confiance moyenne | 0.890 |
 
@@ -124,6 +140,7 @@ Les grandes conclusions sont les suivantes :
 *Figure : vue globale des performances exactes et sémantiques du benchmark.*
 
 Pour la lecture détaillée :
+
 - [Guide des résultats](docs/results_guide.md)
 - [Rapport benchmark](docs/benchmark_report.md)
 
@@ -132,6 +149,7 @@ Pour la lecture détaillée :
 Le projet est centré sur un notebook final.
 
 ### Étapes générales
+
 1. ouvrir le notebook dans l’environnement adapté
 2. installer les dépendances nécessaires
 3. vérifier la configuration
@@ -139,14 +157,16 @@ Le projet est centré sur un notebook final.
 5. récupérer les exports produits à la fin
 
 Pour plus de détails :
+
 - [Guide du notebook](docs/notebook_guide.md)
 
-## Note sur l’environnement
+## Note d’environnement
 
-Ce notebook a été principalement développé et exécuté dans Google Colab avec prise en charge du GPU.
+Ce notebook a été principalement développé et exécuté dans Google Colab avec support GPU.
 
 Certaines étapes dépendent :
-- d’un environnement d’exécution avec GPU
+
+- d’un runtime avec GPU
 - d’un accès à Hugging Face
 - d’utilitaires spécifiques à Colab pour la gestion des secrets et le téléchargement de fichiers
 
@@ -157,7 +177,7 @@ Certaines étapes dépendent :
 - les résultats dépendent du modèle utilisé
 - les métriques exactes sur les conditions restent exigeantes et pénalisent certaines reformulations
 
-## Contact de lecture conseillé
+## Ordre de lecture conseillé
 
 Si vous découvrez le projet, l’ordre conseillé est :
 
