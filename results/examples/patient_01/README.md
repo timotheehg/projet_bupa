@@ -17,5 +17,5 @@ Cet exemple permet de suivre la transformation des données étape par étape su
 
 ## Remarque
 
-Dans cet exemple, le score patient et la taxonomie d'erreurs sont regroupés dans un seul fichier :
+Dans cet exemple, le score patient et l'analyse des erreurs sont regroupés dans un seul fichier :
 - `05_score_and_07_errors.json`
