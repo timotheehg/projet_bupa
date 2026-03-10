@@ -41,7 +41,6 @@ Si vous découvrez le projet, l’ordre de lecture conseillé est :
 
 ### Analyse et synthèse
 
-- [Résumé de l’audit](docs/audit_summary.md)
 - [Rapport benchmark](docs/benchmark_report.md)
 
 ### Fichiers importants
