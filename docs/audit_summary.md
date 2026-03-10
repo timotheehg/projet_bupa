@@ -13,36 +13,47 @@ Il ne s’agit plus d’un simple notebook exploratoire. Il met en place une vra
 ## Points forts identifiés
 
 ### Structure claire
+
 Le notebook distingue bien :
+
 - la source structurée
 - les notes générées
 - la reconstruction
 - les scores
 - la vérification
-- la taxonomie
+- l’analyse des erreurs
 - les exports
 
 ### Évaluation riche
+
 Le projet ne repose pas sur une seule métrique.
+
 Il combine :
+
 - exact match
 - sémantique
+- note vs recon
+- source vs recon
 - vérification
-- taxonomie
+- analyse des erreurs
 - résumés par style de note
 
 ### Benchmark exploitable
+
 La version finale est adaptée à un benchmark verrouillé et à une restitution sérieuse.
 
 ## Points de vigilance
 
 ### Dépendance au modèle
+
 Les résultats dépendent du comportement du modèle utilisé.
 
 ### Importance de l’ordre d’exécution
+
 Le notebook doit être exécuté proprement de haut en bas.
 
 ### Gestion des sorties
+
 Le benchmark final doit être lancé depuis un état propre pour éviter toute pollution des résultats.
 
 ## Verdict
