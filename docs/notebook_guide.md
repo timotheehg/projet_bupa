@@ -72,67 +72,27 @@ Interprétation des écarts observés, des types d’erreurs et des cas difficil
 
 Création des fichiers CSV finaux.
 
-## Comment relancer le notebook
+## Fichiers exportés principaux
 
-### Pré-requis
+Le notebook produit notamment les fichiers suivants :
 
-- environnement compatible
-- dépendances installées
-- accès au modèle utilisé
-- session stable
-
-### Règles importantes
-
-- exécuter les cellules dans l’ordre
-- ne pas modifier les paramètres au milieu d’un run final
-- utiliser la cellule de reset des sorties si nécessaire avant benchmark
-
-## Notebook du dépôt
-
-- [Notebook final](../notebooks/BUPA_benchmark_final.ipynb)
-
-## Voir aussi
-
-- [Pipeline détaillée](pipeline_explained.md)
-- [Guide des résultats](results_guide.md)
-### Données
-
-Téléchargement et chargement des bundles FHIR synthétiques.
-
-### Préfiltrage
-
-Réduction du bruit structurel avant les étapes LLM.
-
-### Gold source
-
-Construction de la source structurée utilisée pour générer les notes.
-
-### Génération de notes
-
-Production de notes cliniques de plusieurs styles.
-
-### Reconstruction
-
-Extraction structurée à partir du texte des notes.
-
-### Scoring
-
-Calcul des métriques selon deux lectures :
-
-- **note vs recon**
-- **source vs recon**
-
-### Vérification
-
-Ajout d’une couche de relecture automatique.
-
-### Analyse des erreurs
-
-Interprétation des écarts observés, des types d’erreurs et des cas difficiles.
-
-### Exports
-
-Création des fichiers CSV finaux.
+- `df_gold.csv`
+- `df_notes.csv`
+- `df_recon.csv`
+- `df_gold_conditions_long.csv`
+- `df_gold_medreq_long.csv`
+- `df_recon_conditions_long.csv`
+- `df_recon_medreq_long.csv`
+- `df_scores.csv`
+- `df_scores_overall_summary.csv`
+- `df_scores_summary_by_note_style.csv`
+- `df_error_analysis.csv`
+- `df_error_types_by_note_style_conditions.csv`
+- `df_error_types_by_note_style_medication_requests.csv`
+- `df_hard_cases_by_note_style.csv`
+- `df_verification.csv`
+- `df_export_review.csv`
+- `df_index.csv`
 
 ## Comment relancer le notebook
 
@@ -151,7 +111,7 @@ Création des fichiers CSV finaux.
 
 ## Notebook du dépôt
 
-- [Notebook final](../notebooks/BUPA_benchmark_final.ipynb)
+- `BUPA_benchmark_final.ipynb`
 
 ## Voir aussi
 
