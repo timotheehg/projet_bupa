@@ -27,7 +27,7 @@ Chaque sous-dossier patient contient :
 
 ## Remarque
 
-Dans cette version du dépôt, les informations de **score** et de **taxonomie** sont regroupées dans un même fichier :
+Dans cette version du dépôt, les informations de **score** et de **errors** sont regroupées dans un même fichier :
 - `05_score_and_07_taxonomy.json`
 
 Cela permet de garder un exemple patient compact tout en conservant les deux niveaux de lecture :
