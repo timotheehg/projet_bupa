@@ -11,7 +11,6 @@ L’objectif est de permettre à un lecteur de comprendre le projet sans devoir 
 - [Guide du notebook](notebook_guide.md)
 - [Guide des résultats](results_guide.md)
 - [Carte du dépôt](repository_map.md)
-- [Résumé de l’audit](audit_summary.md)
 - [Rapport benchmark](benchmark_report.md)
 
 ## Logique de lecture conseillée
