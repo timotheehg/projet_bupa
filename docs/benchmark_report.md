@@ -40,14 +40,14 @@ La comparaison entre **note vs recon** et **source vs recon** suggère qu’une 
 
 | Indicateur | Valeur |
 |---|---:|
-| Note vs recon conditions exact F1 | 0.525 |
-| Note vs recon conditions sémantique F1 | 0.833 |
-| Note vs recon medication requests exact F1 | 0.802 |
-| Note vs recon medication requests sémantique F1 | 0.905 |
-| Source vs recon conditions exact F1 | 0.440 |
-| Source vs recon conditions sémantique F1 | 0.390 |
-| Source vs recon medication requests exact F1 | 0.703 |
-| Source vs recon medication requests sémantique F1 | 0.730 |
+| Note vs recon conditions exact F1 | 0.392 |
+| Note vs recon conditions sémantique F1 | 0.927 |
+| Note vs recon medication requests exact F1 | 0.834 |
+| Note vs recon medication requests sémantique F1 | 0.882 |
+| Source vs recon conditions exact F1 | 0.265 |
+| Source vs recon conditions sémantique F1 | 0.827 |
+| Source vs recon medication requests exact F1 | 0.812 |
+| Source vs recon medication requests sémantique F1 | 0.901 |
 
 ![Vue globale des F1 exacts et sémantiques](../assets/figures/overall_f1.png)
 
@@ -76,8 +76,8 @@ La comparaison entre **note vs recon** et **source vs recon** suggère qu’une 
 
 | Verdict | Nombre |
 |---|---:|
-| consistent | 36 |
-| unknown | 4 |
+| consistent | 35 |
+| unknown | 5 |
 
 ![Vérification par style de note](../assets/figures/verification_by_style.png)
 
