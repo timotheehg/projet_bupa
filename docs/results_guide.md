@@ -121,10 +121,10 @@ Je conseille l’ordre suivant :
 
 | Style de note | Note vs recon cond exact F1 | Note vs recon méd exact F1 | Source vs recon cond exact F1 | Source vs recon méd exact F1 | Taux consistent |
 |---|---:|---:|---:|---:|---:|
-| Health check summary | 0.533 | 0.829 | 0.458 | 0.785 | 0.900 |
-| Medical history note | 0.650 | 0.882 | 0.546 | 0.850 | 0.900 |
-| Short consultation note | 0.381 | 0.776 | 0.288 | 0.665 | 0.900 |
-| Telegraphic note | 0.536 | 0.722 | 0.460 | 0.525 | 0.900 |
+| Health check summary | 0.474 | 0.909 | 0.351 | 0.887 | 0.900 |
+| Medical history note | 0.521 | 0.916 | 0.352 | 0.902 | 0.900 |
+| Short consultation note | 0.126 | 0.746 | 0.067 | 0.694 | 0.900 |
+| Telegraphic note | 0.449 | 0.763 | 0.289 | 0.763 | 0.800 |
 
 ![Comparaison des F1 exacts par style de note](../assets/figures/style_exact_f1.png)
 
@@ -134,8 +134,8 @@ Je conseille l’ordre suivant :
 
 | Verdict | Nombre |
 |---|---:|
-| consistent | 36 |
-| unknown | 4 |
+| consistent | 35 |
+| unknown | 5 |
 
 ![Vérification par style de note](../assets/figures/verification_by_style.png)
 
