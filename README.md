@@ -90,6 +90,7 @@ Contient les résultats intermédiaires principaux :
 - source structurée
 - notes générées
 - reconstruction
+- tables longues gold et reconstruction
 
 ### `results/summaries/`
 
@@ -114,8 +115,8 @@ Le benchmark final a été réalisé sur **40 patients** répartis entre plusieu
 Les grandes conclusions sont les suivantes :
 
 - le pipeline fonctionne globalement bien
-- les **medication requests** sont mieux reconstruites que les **conditions**
-- les **conditions** ont de bons scores sémantiques mais des scores exacts plus faibles
+- les medication requests sont mieux reconstruites que les conditions
+- les conditions ont de bons scores sémantiques mais des scores exacts plus faibles
 - une partie importante de la perte d’information semble apparaître entre la source structurée et la note générée
 - certains styles de notes sont plus robustes que d’autres
 
@@ -143,6 +144,28 @@ Pour la lecture détaillée :
 - [Guide des résultats](docs/results_guide.md)
 - [Rapport benchmark](docs/benchmark_report.md)
 
+## Fichiers CSV principaux
+
+Les principaux exports produits par le notebook sont les suivants :
+
+- `df_gold.csv`
+- `df_notes.csv`
+- `df_recon.csv`
+- `df_gold_conditions_long.csv`
+- `df_gold_medreq_long.csv`
+- `df_recon_conditions_long.csv`
+- `df_recon_medreq_long.csv`
+- `df_scores.csv`
+- `df_scores_overall_summary.csv`
+- `df_scores_summary_by_note_style.csv`
+- `df_error_analysis.csv`
+- `df_error_types_by_note_style_conditions.csv`
+- `df_error_types_by_note_style_medication_requests.csv`
+- `df_hard_cases_by_note_style.csv`
+- `df_verification.csv`
+- `df_export_review.csv`
+- `df_index.csv`
+
 ## Comment relancer le projet
 
 Le projet est centré sur un notebook final.
@@ -159,13 +182,13 @@ Pour plus de détails :
 
 - [Guide du notebook](docs/notebook_guide.md)
 
-## Note d’environnement
+## Note sur l’environnement
 
-Ce notebook a été principalement développé et exécuté dans Google Colab avec support GPU.
+Ce notebook a été principalement développé et exécuté dans Google Colab avec prise en charge du GPU.
 
 Certaines étapes dépendent :
 
-- d’un runtime avec GPU
+- d’un environnement d’exécution avec GPU
 - d’un accès à Hugging Face
 - d’utilitaires spécifiques à Colab pour la gestion des secrets et le téléchargement de fichiers
 
