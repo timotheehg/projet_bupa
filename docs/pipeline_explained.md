@@ -66,7 +66,7 @@ L’objectif est de retrouver :
 
 Le scoring mesure la qualité de la reconstruction.
 
-Le projet distingue désormais deux lectures complémentaires :
+Le projet distingue deux lectures complémentaires :
 
 - **note vs recon** : comparaison entre la note générée et la reconstruction
 - **source vs recon** : comparaison entre la source structurée de référence et la reconstruction
@@ -79,7 +79,7 @@ On utilise plusieurs métriques :
 - exact match
 - matching sémantique
 
-Cette double lecture est utile car elle permet de distinguer :
+Cette double lecture permet de distinguer :
 
 - ce qui est bien reconstruit à partir de la note
 - ce qui a déjà pu être perdu entre la source structurée et la note générée
@@ -116,6 +116,5 @@ La pipeline produit ensuite :
 
 ## Voir les fichiers associés
 
-- [Résultats intermédiaires](../results/intermediates/)
-- [Résultats finaux](../results/summaries/)
-- [Exemples patients](../results/examples/)
+- [Guide des résultats](results_guide.md)
+- [Carte du dépôt](repository_map.md)
